@@ -359,6 +359,31 @@
       if (url && !/^https:\/\//i.test(url) && !/^#[\w-]+$/.test(url)) throw new Error(label + ": use um link HTTPS ou um destino interno como #contato.");
     }
   }
+  function htmlAttr(raw) {
+    return String(raw || "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  async function syncMetadata() {
+    const file = await github(BASE + "/contents/index.html?ref=main");
+    let html = decodeBase64(file.content);
+    const s = content.site;
+    const metas = [
+      ['name','theme-color',s.themeColor],
+      ['name','description',s.description],
+      ['property','og:title',s.socialTitle || s.title],
+      ['property','og:description',s.socialDescription || s.description]
+    ];
+    for (const [attr, name, value] of metas) {
+      const pattern = new RegExp('<meta\\s+' + attr + '="' + name + '"\\s+content="[^"]*"\\s*\\/?>','i');
+      const replacement = '<meta ' + attr + '="' + name + '" content="' + htmlAttr(value) + '">';
+      if (pattern.test(html)) html = html.replace(pattern,replacement);
+    }
+    html = html.replace(/<title>[\s\S]*?<\/title>/i,'<title>' + htmlAttr(s.title) + '</title>');
+    await github(BASE + "/contents/index.html","PUT",{
+      message:"Sincroniza título e metadados do portfólio para redes sociais",
+      content:encodeBase64(new TextEncoder().encode(html)),
+      sha:file.sha,branch:"main"
+    });
+  }
   async function save() {
     if (busy || !content || JSON.stringify(content) === lastSaved) return;
     try {
@@ -372,7 +397,12 @@
       });
       contentSHA = result.content.sha;
       lastSaved = JSON.stringify(content);
-      toast("Alterações publicadas no GitHub! Aguarde a atualização do GitHub Pages.");
+      try {
+        await syncMetadata();
+        toast("Alterações publicadas no GitHub! Aguarde a atualização do GitHub Pages.");
+      } catch (metadataError) {
+        toast("Conteúdo publicado, mas os metadados de compartilhamento precisam ser sincronizados: " + metadataError.message, true);
+      }
     } catch (error) { toast(error.message,true); }
     finally { setBusy(false); changed(); }
   }
