@@ -64,7 +64,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{
 .upload-row small{font-size:11px;color:#85a0a3}
 .upload-button{cursor:pointer!important;background:#263e3f;border:1px solid #41605a;padding:8px 14px;color:#d6f2e0!important;border-radius:7px;font-weight:750;font-size:11px}
 .upload-button:hover{background:#38514b}.upload-button.disabled{opacity:.55;pointer-events:none}
-.file-input{position:absolute!important;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+.file-input{position:absolute!important;width:1px;height:1px;overflow:hidden;opacity:0}
 .field-image-preview{max-height:185px;max-width:min(100%,320px);width:auto;height:auto;object-fit:cover;border:1px solid #46605a;border-radius:8px;margin-top:5px}
 .collection{margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
 .collection-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:15px}
