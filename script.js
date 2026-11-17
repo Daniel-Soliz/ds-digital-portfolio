@@ -315,12 +315,13 @@
     target.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
     history.replaceState(null, "", selector);
   });
+  let previewActive = false;
   window.addEventListener("message", event => {
     if (event.origin !== window.location.origin) return;
-    if (event.data?.type === "DS_DIGITAL_PREVIEW") render(event.data.content);
+    if (event.data?.type === "DS_DIGITAL_PREVIEW") { previewActive = true; render(event.data.content); }
   });
   fetch(new URL("./content.json", document.baseURI), {cache:"no-store"})
     .then(response => { if (!response.ok) throw Error("Conteúdo indisponível (" + response.status + ")"); return response.json(); })
-    .then(render)
+    .then(data => { if (!previewActive) render(data); })
     .catch(error => console.warn("DS Digital: mantendo conteúdo HTML original.", error));
 })();
