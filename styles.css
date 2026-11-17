@@ -63,3 +63,19 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 @media(max-width:760px){.container{width:min(calc(100% - 36px),600px)}.header-inner{height:70px;gap:12px}.brand-copy{display:none}.nav{gap:15px;margin-left:auto}.nav a{font-size:11px}.header-cta{font-size:11px;padding:11px 12px;gap:6px}.header-cta span{display:none}.hero{padding:65px 0 72px}.hero-grid{grid-template-columns:1fr;gap:52px}.hero h1{font-size:clamp(42px,9vw,64px)}.hero-description{font-size:15px}.hero-preview{min-height:auto;padding:12px 10px 35px}.preview-window{max-width:525px}.floating-label{bottom:10px;left:0}.preview-note{display:none}.trust-inner{justify-content:center;flex-wrap:wrap;gap:13px}.trust-inner>span{width:100%;text-align:center}.section{padding:77px 0}.section-heading{display:block;margin-bottom:29px}.section-heading>p{max-width:520px;margin-top:19px}.service-grid,.project-grid{grid-template-columns:1fr;gap:16px}.service-card{min-height:255px}.project-grid{gap:38px}.project-visual{aspect-ratio:1.55}.about-layout{grid-template-columns:1fr;gap:34px}.contact-section{padding-top:0}.contact-panel{grid-template-columns:1fr;gap:20px;padding:36px 26px}.contact-decor{display:none}.footer-inner{padding:26px 0;flex-wrap:wrap}.footer p{order:3;width:100%}}
 @media(max-width:420px){.container{width:calc(100% - 32px)}.brand-symbol{font-size:26px}.nav{gap:12px}.nav a:nth-child(3){display:none}.header-cta{font-size:10px;padding:11px 10px}.hero h1{font-size:clamp(39px,11vw,51px)}.eyebrow{font-size:9px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-perks{gap:10px 15px}.hero-preview{padding-inline:0}.preview-body{padding:16px;min-height:270px}.preview-layout{gap:11px;padding-top:35px}.preview-graphic{border-radius:8px}.graphic-ring{border-width:13px}.graphic-center{font-size:52px}.preview-navigation>span{font-size:6px}.preview-text h2{font-size:20px}.preview-text p{font-size:9px}.preview-pill{margin-top:10px;font-size:8px;padding:7px}.floating-label{padding:9px 11px}.trust-inner strong{font-size:9px}.section h2{font-size:35px}.projects-footer{flex-direction:column;align-items:flex-start}.project-visual{aspect-ratio:1.25}.footer-links{gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* Recursos visuais controlados pelo painel administrativo */
+.site-logo-img{display:block;width:auto;max-width:150px;max-height:46px;object-fit:contain;letter-spacing:normal}
+.footer-brand .site-logo-img{max-height:40px;max-width:125px}
+.hero.has-bg-photo{background-position:center;background-size:cover;background-repeat:no-repeat}
+.preview-body.has-custom-image{padding:0;min-height:300px;display:block}
+.preview-body.has-custom-image>:not(.preview-uploaded-image){display:none!important}
+.preview-uploaded-image{width:100%;height:304px;display:block;object-fit:cover}
+.service-card .service-image{display:block;max-width:100%;width:100%;aspect-ratio:16/8;object-fit:cover;border:1px solid rgba(209,237,217,.17);border-radius:9px;margin-top:20px}
+.project-visual.has-project-image{padding:0;background:#0c1a20}
+.project-visual.has-project-image .project-cover{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.project-visual.has-project-image .visual-header{position:absolute;top:0;left:0;width:100%;z-index:1;padding:20px;background:linear-gradient(180deg,rgba(0,0,0,.58),transparent);color:white}
+.about-uploaded-image{display:block;max-width:100%;width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:9px;margin-bottom:22px}
+.contact-panel.has-contact-photo{background-size:cover;background-position:center}
+@media(max-width:760px){.preview-body.has-custom-image{min-height:240px}.preview-uploaded-image{height:240px}.project-visual.has-project-image .visual-header{padding:15px}}
