@@ -181,7 +181,7 @@
       if ((user.login || "").toLowerCase() !== OWNER.toLowerCase()) throw new Error("Esta conta não é a administradora autorizada para este site.");
       account = user.login;
       const repo = await github(BASE);
-      if (repo.permissions && repo.permissions.push === false) throw new Error("Seu token não tem permissão de escrita neste repositório.");
+      if (repo.full_name && repo.full_name.toLowerCase() !== (OWNER + "/" + REPO).toLowerCase()) throw new Error("Repositório incorreto.");
       await fetchContent();
       $("#account-label").textContent = "Conectado como @" + account + " · publicando no GitHub";
       $("#login-overlay").hidden = true;
@@ -230,6 +230,7 @@
           const url = await uploadImage(file.files[0]);
           set(path, url);
           input.value = url;
+          syncImage();
           toast("Imagem enviada ao GitHub. Publique as alterações para aplicá-la no site.");
         } catch (err) { toast(err.message, true); }
         finally { upload.textContent = "Enviar imagem"; upload.classList.remove("disabled"); file.value = ""; }
