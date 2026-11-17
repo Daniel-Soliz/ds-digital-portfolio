@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta name="theme-color" content="#0d1219">
+  <title>Administração | DS Digital</title>
+  <link rel="stylesheet" href="./admin.css?v=20261117-1">
+</head>
+<body>
+  <div class="login-overlay" id="login-overlay">
+    <div class="login-card">
+      <span class="login-mark">DS<span>.</span></span>
+      <p class="overline">ÁREA ADMINISTRATIVA</p>
+      <h1>Gerencie o conteúdo do seu site.</h1>
+      <p class="login-copy">Edite textos, imagens, botões, serviços e projetos. Apenas a conta GitHub autorizada pode publicar mudanças.</p>
+      <form id="login-form">
+        <label for="access-token">Token de acesso do GitHub</label>
+        <input type="password" id="access-token" name="access-token" required autocomplete="off" spellcheck="false" placeholder="github_pat_...">
+        <button class="primary full" type="submit" id="login-button">Conectar com segurança</button>
+      </form>
+      <p class="login-help">Crie um token de acesso <strong>fine-grained</strong> com acesso somente ao repositório <code>Daniel-Soliz/ds-digital-portfolio</code> e permissão <strong>Contents: Read and write</strong>. Não use sua senha do GitHub aqui.</p>
+      <p class="login-help"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Criar token no GitHub</a> · <a href="../">Ver site público</a></p>
+      <p class="security-note">O token é mantido somente nesta aba, em memória, e é enviado apenas à API oficial do GitHub. Ele não fica gravado no site nem no navegador.</p>
+      <p class="alert" id="login-error" role="alert"></p>
+    </div>
+  </div>
+
+  <div id="editor-app" class="admin-shell" hidden>
+    <aside class="sidebar">
+      <div class="sidebar-brand"><span>DS<span class="accent">.</span></span><div><strong>DS DIGITAL</strong><small>Gerenciador de conteúdo</small></div></div>
+      <p class="sidebar-caption">EDITAR PÁGINA INICIAL</p>
+      <nav id="section-nav" aria-label="Seções do painel"></nav>
+      <div class="sidebar-bottom">
+        <a href="../" target="_blank" rel="noopener noreferrer">Abrir site público <span aria-hidden="true">↗</span></a>
+        <button type="button" id="logout">Desconectar</button>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="toolbar">
+        <div><p class="overline">DASHBOARD / SITE</p><h1>Editar página inicial</h1><p id="account-label" class="subline"></p></div>
+        <div class="toolbar-actions">
+          <span id="dirty-state" class="save-state" aria-live="polite">Nenhuma alteração</span>
+          <button class="subtle" type="button" id="reload-button">Recarregar</button>
+          <button class="subtle" type="button" id="preview-button">Pré-visualizar</button>
+          <button class="primary" type="button" id="save-button" disabled>Publicar alterações</button>
+        </div>
+      </header>
+      <div class="notice"><strong>Como funciona:</strong> altere os campos, inclua imagens e use a pré-visualização. Quando estiver satisfeito, clique em <strong>Publicar alterações</strong>. O GitHub Pages poderá levar alguns minutos para atualizar.</div>
+      <div id="editor-sections"></div>
+      <footer class="workspace-footer">DS Digital · Administração segura via GitHub · Sem senha exposta no código</footer>
+    </main>
+  </div>
+
+  <dialog id="preview-dialog" class="preview-dialog" aria-label="Prévia das alterações">
+    <div class="preview-header"><strong>Prévia das alterações (ainda não publicadas)</strong><button id="close-preview" class="subtle" type="button">Fechar prévia ✕</button></div>
+    <iframe id="preview-frame" title="Pré-visualização do portfólio DS Digital" src="../" loading="lazy"></iframe>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./admin.js?v=20261117-1" defer></script>
+</body>
+</html>
