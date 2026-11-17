@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "site": {
+    "title": "DS Digital | Criação de Sites, Lojas Virtuais e Design",
+    "description": "DS Digital: criação de sites profissionais, lojas virtuais e artes digitais. Conheça os projetos de Daniel Soliz e solicite seu orçamento pelo WhatsApp.",
+    "socialTitle": "DS Digital | Sites profissionais e design",
+    "socialDescription": "Seu negócio com uma presença digital profissional. Sites, lojas virtuais e artes digitais sob medida.",
+    "themeColor": "#0d1219",
+    "backgroundColor": "#0d1219",
+    "accentColor": "#a9eacb",
+    "textColor": "#eef4f3",
+    "logoText": "DS.",
+    "logoImage": "",
+    "brandName": "DS DIGITAL",
+    "brandSubtitle": "Daniel Soliz",
+    "heroBackgroundImage": "",
+    "footerLogoText": "DS.",
+    "footerBrandSuffix": "DIGITAL",
+    "footerCopyright": "DS Digital · Daniel Soliz"
+  },
+  "navigation": [
+    {
+      "label": "Serviços",
+      "href": "#servicos"
+    },
+    {
+      "label": "Projetos",
+      "href": "#projetos"
+    },
+    {
+      "label": "Sobre",
+      "href": "#sobre"
+    }
+  ],
+  "headerCta": {
+    "label": "Fazer orçamento",
+    "message": "Olá, Daniel! Vim pelo seu portfólio e quero um orçamento."
+  },
+  "hero": {
+    "eyebrow": "DESENVOLVIMENTO WEB & DESIGN DIGITAL",
+    "title": "Seu negócio merece",
+    "highlight": "um site à altura.",
+    "description": "Crio sites modernos, lojas virtuais e artes digitais para apresentar sua marca com profissionalismo e facilitar o contato com seus clientes.",
+    "ctaLabel": "Solicitar orçamento",
+    "ctaMessage": "Olá, Daniel! Gostaria de um orçamento para um site.",
+    "secondaryLabel": "Ver meus projetos",
+    "secondaryHref": "#projetos",
+    "perks": [
+      {
+        "text": "Visual profissional"
+      },
+      {
+        "text": "Adaptado para celular"
+      },
+      {
+        "text": "Atendimento direto"
+      }
+    ],
+    "preview": {
+      "image": "",
+      "urlText": "ds.digital / projetos",
+      "brand": "STUDIO",
+      "brandAccent": "7",
+      "menu": "Serviços   Produtos   Contato",
+      "kicker": "PROJETO EM DESTAQUE",
+      "title": "Presença que faz a diferença.",
+      "description": "Design que combina identidade, clareza e funcionalidade.",
+      "button": "Explorar projeto",
+      "number": "7",
+      "bottomLeft": "DESIGN RESPONSIVO",
+      "bottomRight": "EXPERIÊNCIA DIGITAL",
+      "badgeIcon": "✦",
+      "badgeTitle": "Design & estratégia",
+      "badgeDescription": "Do primeiro clique ao contato",
+      "note": "Uma vitrine para destacar seu trabalho."
+    }
+  },
+  "trust": {
+    "label": "PROJETOS PENSADOS PARA",
+    "items": [
+      {
+        "text": "NEGÓCIOS LOCAIS"
+      },
+      {
+        "text": "EMPREENDEDORES"
+      },
+      {
+        "text": "MARCAS DIGITAIS"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "01 / O QUE EU FAÇO",
+    "title": "Soluções para sua marca",
+    "highlight": "se destacar.",
+    "description": "Da primeira presença online a uma loja pronta para mostrar seus produtos. Tudo com uma comunicação simples e direta.",
+    "items": [
+      {
+        "id": "sites",
+        "icon": "⌘",
+        "image": "",
+        "title": "Sites profissionais",
+        "text": "Sites institucionais, páginas de apresentação e landing pages modernas, com foco em transmitir confiança e facilitar o contato.",
+        "ctaLabel": "Quero um site",
+        "ctaMessage": "Olá! Quero um orçamento de site profissional."
+      },
+      {
+        "id": "lojas",
+        "icon": "▦",
+        "image": "",
+        "title": "Lojas virtuais",
+        "text": "Vitrines, catálogos e experiências de compra organizadas para apresentar seus produtos e apoiar as vendas online.",
+        "ctaLabel": "Quero uma loja",
+        "ctaMessage": "Olá! Quero um orçamento de loja virtual."
+      },
+      {
+        "id": "artes",
+        "icon": "✳",
+        "image": "",
+        "title": "Flyers & artes digitais",
+        "text": "Artes para redes sociais, divulgação de promoções e peças visuais alinhadas à identidade do seu negócio.",
+        "ctaLabel": "Quero uma arte",
+        "ctaMessage": "Olá! Quero um orçamento de artes digitais."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "02 / PORTFÓLIO",
+    "title": "Projetos que",
+    "highlight": "saíram do papel.",
+    "description": "Alguns exemplos do meu trabalho. Conheça as páginas e imagine como sua ideia pode ganhar vida.",
+    "items": [
+      {
+        "id": "black7",
+        "category": "SITE & CATÁLOGO",
+        "title": "Studio Black7",
+        "description": "Presença digital para barbearia, unindo apresentação de serviços, produtos e identidade visual.",
+        "url": "https://studioblack7.com.br/",
+        "image": "",
+        "visualPreset": "visual-studio",
+        "visualHeader": "STUDIO BLACK7",
+        "visualKicker": "BARBEARIA & ESTILO",
+        "visualName": "BLACK",
+        "visualAccent": "7",
+        "visualSubtitle": "Estilo, serviços e produtos em um só lugar.",
+        "ctaLabel": "Visitar projeto"
+      },
+      {
+        "id": "saldo",
+        "category": "LOJA VIRTUAL",
+        "title": "Shop Saldo",
+        "description": "Exemplo de vitrine online, com foco em organização visual e navegação pelos produtos.",
+        "url": "https://daniel-soliz.github.io/shop-saldo/",
+        "image": "",
+        "visualPreset": "visual-shop",
+        "visualHeader": "SHOP SALDO",
+        "visualKicker": "VITRINE DIGITAL",
+        "visualName": "SHOP",
+        "visualAccent": "SALDO",
+        "visualSubtitle": "Produtos apresentados com clareza.",
+        "ctaLabel": "Visitar projeto"
+      }
+    ],
+    "footerText": "Seu próximo projeto pode estar aqui.",
+    "footerCtaLabel": "Vamos conversar sobre sua ideia",
+    "footerCtaHref": "#contato"
+  },
+  "about": {
+    "eyebrow": "03 / QUEM ESTÁ POR TRÁS",
+    "title": "Olá, eu sou",
+    "highlight": "Daniel.",
+    "paragraph1": "Sou o criador da DS Digital. Desenvolvo soluções web e materiais visuais para ajudar negócios e profissionais a se apresentarem melhor na internet.",
+    "paragraph2": "Acredito em projetos bem organizados, comunicação transparente e experiências que funcionam bem tanto no computador quanto no celular.",
+    "image": "",
+    "cardHeading": "MEU JEITO DE TRABALHAR",
+    "steps": [
+      {
+        "text": "Você me conta sua ideia"
+      },
+      {
+        "text": "Alinhamos a proposta e o visual"
+      },
+      {
+        "text": "Desenvolvo e ajustamos os detalhes"
+      }
+    ],
+    "cardFooter": "Sem complicação. Uma conversa já é o primeiro passo."
+  },
+  "contact": {
+    "eyebrow": "04 / VAMOS COMEÇAR?",
+    "title": "Sua ideia merece",
+    "highlight": "sair do papel.",
+    "description": "Me conte o que você precisa e conversamos sobre a melhor solução para o seu negócio. Orçamento pelo WhatsApp, sem compromisso.",
+    "phone": "5511940579316",
+    "ctaLabel": "Chamar no WhatsApp",
+    "ctaMessage": "Olá, Daniel! Conheci seu portfólio DS Digital e gostaria de pedir um orçamento.",
+    "backgroundImage": "",
+    "decorText": "DS.",
+    "decorCaption": "SEU PRÓXIMO PROJETO COMEÇA AQUI"
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/dsdigital.tech/"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/daniel-soliz/"
+      }
+    ]
+  }
+}
